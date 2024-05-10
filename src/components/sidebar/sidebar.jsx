@@ -47,33 +47,33 @@ const Sidebar = () => {
       {weather && (
          <section className='weather_box' style={{ paddingLeft: "1rem", fontSize: "14px", borderRadius: "8px",  paddingTop:"5px", paddingBottom:"5px", paddingRight:"10px"}}>
           <div style={{}}>
-            <h3 style={{width:"100%", textAlign:"center"}}> Weather</h3>
-            <p style={{fontSize:"18px", width:"100%", fontWeight:700}}>{location_name}</p>
+            <h2 style={{width:"100%", textAlign:"center"}}> Weather</h2>
+            <p style={{fontSize:"16px", width:"100%", fontWeight:700}}>{location_name}</p>
           </div>
           <div style={{display:"flex", lineHeight:"1px", gap:"4rem", justifyContent:"flex-start", alignItems:"center"}} className='box'>
             <div style={{display:"flex", flexDirection:"column", justifyContent:"flex-start", alignItems:"flex-start",  lineHeight:"1px", width:"60%"}}>
-              <SiInstatus style={{fontSize:"25px"}}/>
+              <SiInstatus style={{fontSize:"20px"}}/>
               <p>Status</p>
             </div>
             <p style={{ width: "40%" }}>{ weather.status}</p>
           </div>
           <div style={{display:"flex", lineHeight:"1px", gap:"4rem", justifyContent:"flex-start", alignItems:"center"}} className='box'>
             <div style={{display:"flex", flexDirection:"column", justifyContent:"flex-start", alignItems:"flex-start",  lineHeight:"1px", width:"60%"}}>
-              <CiTempHigh style={{fontSize:"25px"}}/>
+              <CiTempHigh style={{fontSize:"20px"}}/>
               <p>Temperature</p>
             </div>
             <p style={{ width: "40%" }}>{ weather.temperature}</p>
           </div>
           <div style={{display:"flex", lineHeight:"1px", gap:"4rem", justifyContent:"flex-start", alignItems:"center"}} className='box'>
             <div style={{display:"flex", flexDirection:"column", justifyContent:"flex-start", alignItems:"flex-start",  lineHeight:"1px", width:"60%"}}>
-              < MdWindPower style={{fontSize:"25px"}}/>
+              < MdWindPower style={{fontSize:"20px"}}/>
               <p>Wind</p>
             </div>
             <p style={{ width: "40%" }}>{weather?.wind?.split(",")[0] }</p>
           </div>
           <div style={{display:"flex", lineHeight:"1px", gap:"4rem", justifyContent:"flex-start", alignItems:"center"}} className='box'>
             <div style={{display:"flex", flexDirection:"column", justifyContent:"flex-start", alignItems:"flex-start",  lineHeight:"1px", width:"60%"}}>
-              < GiPressureCooker style={{fontSize:"25px"}}/>
+              < GiPressureCooker style={{fontSize:"20px"}}/>
               <p>Pressure</p>
             </div>
             <p style={{ width: "40%" }}>{ weather.pressure}</p>

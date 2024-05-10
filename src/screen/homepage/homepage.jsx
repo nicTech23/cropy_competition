@@ -32,11 +32,11 @@ const Homepage = () => {
             Cropify-AI:
           </h1>
           <div className='strong'>
-            Revolutionizing Farming with Artificial Intelligence
+            Your Intelligent Farming Companion
           </div>
 
           <div className='technology'>
-            <p>🌱 Cropify AI: Your Intelligent Farming Companion 🌾
+            <p>
             Welcome to Cropify AI, the cutting-edge agricultural solution that harnesses the power of artificial intelligence to revolutionize your farming experience! 🚀
             With our three innovative features, we empower you to unlock the full potential of your crops and maximize your yields like never before.
               </p>

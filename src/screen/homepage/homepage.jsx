@@ -55,7 +55,7 @@ const Homepage = () => {
         marginBottom:"6rem"
       }}>
         <div>
-          <h1 style={{borderBottom:"1px solid black", padding:"10px", marginTop:"5rem",}}>Purpose of Cropify-AI</h1>
+          <h1 style={{borderBottom:"1px solid black", padding:"10px", marginTop:"5rem",}}>Components</h1>
         </div>
 
         <ol>

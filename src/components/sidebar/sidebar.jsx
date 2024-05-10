@@ -47,7 +47,7 @@ const Sidebar = () => {
       {weather && (
          <section className='weather_box' style={{ paddingLeft: "1rem", fontSize: "14px", borderRadius: "8px",  paddingTop:"5px", paddingBottom:"5px", paddingRight:"10px"}}>
           <div style={{}}>
-            <h3 style={{width:"100%"}}> Weather</h3>
+            <h3 style={{width:"100%", textAlign:"center"}}> Weather</h3>
             <p style={{fontSize:"18px", width:"100%", fontWeight:700}}>{location_name}</p>
           </div>
           <div style={{display:"flex", lineHeight:"1px", gap:"4rem", justifyContent:"flex-start", alignItems:"center"}} className='box'>

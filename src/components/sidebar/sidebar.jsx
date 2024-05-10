@@ -46,9 +46,9 @@ const Sidebar = () => {
       
       {weather && (
          <section className='weather_box' style={{ paddingLeft: "1rem", fontSize: "14px", borderRadius: "8px",  paddingTop:"5px", paddingBottom:"5px", paddingRight:"10px"}}>
-          <div style={{display:"flex", justifyContent:"space-between", alignItems:"flex_start", width:"100%", gap:"1.2rem"}}>
-            <h3 style={{width:"30%"}}> Weather</h3>
-            <p style={{fontSize:"18px", width:"70%", fontWeight:700}}>{location_name}</p>
+          <div style={{}}>
+            <h3 style={{width:"100%"}}> Weather</h3>
+            <p style={{fontSize:"18px", width:"100%", fontWeight:700}}>{location_name}</p>
           </div>
           <div style={{display:"flex", lineHeight:"1px", gap:"4rem", justifyContent:"flex-start", alignItems:"center"}} className='box'>
             <div style={{display:"flex", flexDirection:"column", justifyContent:"flex-start", alignItems:"flex-start",  lineHeight:"1px", width:"60%"}}>
@@ -81,10 +81,10 @@ const Sidebar = () => {
         </section>
        )}
         
-      <section className='user'>
+      {/* <section className='user'>
           <div className='user_circle'>N</div>
           <h1 className='name'>Nicolas</h1>
-      </section>
+      </section> */}
 
     </section>
   )

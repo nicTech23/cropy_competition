@@ -1,7 +1,7 @@
 .sidebar_div {
     width: 100%;
     background-color: #325757;
-    height: 100%;
+    height: 100vh;
     color: white;
     padding-left: 10px;
     padding-left: 20px;
@@ -17,7 +17,11 @@
 
 .nav {
     width: 90%;
-    margin-top: 2rem;
+    margin-top: 1rem;
+}
+
+.nav_container{
+    height: 40px;
 }
 
 .nav > .nav_container > div {
@@ -107,5 +111,5 @@
 .weather_box{
     width: 100%;
     background-color: #427373;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }

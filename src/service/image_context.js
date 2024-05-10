@@ -26,7 +26,7 @@ const ImageProvider = ({children}) => {
         try {
             if (picture) {
                 set_pic_loading(true)
-                const response = await axios.post(`http://localhost:5000/farmGPT/image`, formData)
+                const response = await axios.post(`https://cropify-ai.onrender.com/farmGPT/image`, formData)
                 if (response.status === 200) {
                     const data = await response.data
                     set_img_data(data)

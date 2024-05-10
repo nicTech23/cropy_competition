@@ -36,7 +36,7 @@ const ChatProvider = ({children}) => {
         setChatLoad(true)
       try {
           setMessage(mes)
-          const chat_response = await axios.post(`http://localhost:5000/farmGPT/chat`, { message: mes, user_id:user, conversation_id:chatID })
+          const chat_response = await axios.post(`https://cropify-ai.onrender.com/farmGPT/chat`, { message: mes, user_id:user, conversation_id:chatID })
           setChatLoad(false)
           if (chat_response.status === 200) {
             const data = await chat_response.data.content
@@ -55,7 +55,7 @@ const ChatProvider = ({children}) => {
    setChatLoad(true)
    try {
        
-       const chat_response = await axios.post(`http://localhost:5000/farmGPT/chat`, { message: message, user_id:user, conversation_id:chatID })
+       const chat_response = await axios.post(`https://cropify-ai.onrender.com/farmGPT/chat`, { message: message, user_id:user, conversation_id:chatID })
       
       if (chat_response.status === 200) {
         const data = await chat_response.data.content

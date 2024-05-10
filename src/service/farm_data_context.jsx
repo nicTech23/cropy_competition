@@ -62,7 +62,7 @@ useEffect(()=>{
   
 const get_weather = useCallback(async()=>{
   try {
-    const response = await axios.get(`http://localhost:5000/weather/weather-by-coordinates/${location.latitude}/${location.longitude}`)
+    const response = await axios.get(`https://cropify-ai.onrender.com/weather/weather-by-coordinates/${location.latitude}/${location.longitude}`)
   if (response.status === 200){
     const data = response.data
     setWeather(data)
@@ -84,7 +84,7 @@ const get_weather = useCallback(async()=>{
 
 const get_loaction_name = async()=>{
  try {
-     const response = await axios.get(`http://localhost:5000/weather/current-location/${location.latitude}/${location.longitude}`)
+     const response = await axios.get(`https://cropify-ai.onrender.com/weather/current-location/${location.latitude}/${location.longitude}`)
 
    if (response.status === 200) {
      const data = await response.data.location[0].name
@@ -145,7 +145,7 @@ const get_farm_data = useCallback((e) =>{
           precipitation_probability: weather?.precipitation_probability
         }
       }
-      const fertilizer_response = await axios.post(`http://localhost:5000/farm/fertilizer_recommendation`, farm_body)
+      const fertilizer_response = await axios.post(`https://cropify-ai.onrender.com/farm/fertilizer_recommendation`, farm_body)
       console.log(farm_body)
       if (fertilizer_response.status === 200) {
         const data = await fertilizer_response.data 
@@ -186,7 +186,7 @@ const get_farm_data = useCallback((e) =>{
         }
       }
       setNav(false)
-      const fertilizer_response = await axios.post(`http://localhost:5000/farm/weed_control`, farm_body)
+      const fertilizer_response = await axios.post(`https://cropify-ai.onrender.com/farm/weed_control`, farm_body)
       
       if (fertilizer_response.status === 200) {
         const data = await fertilizer_response.data 
@@ -230,7 +230,7 @@ const get_farm_data = useCallback((e) =>{
       }
       setLoad(true)
       setNav(false)
-      const fertilizer_response = await axios.post(`http://localhost:5000/farm/pest_and_disease_control`, farm_body)
+      const fertilizer_response = await axios.post(`https://cropify-ai.onrender.com/farm/pest_and_disease_control`, farm_body)
       
       if (fertilizer_response.status === 200) {
         const data = await fertilizer_response.data 
@@ -273,7 +273,7 @@ const get_farm_data = useCallback((e) =>{
         }
       }
       setNav(false)
-      const fertilizer_response = await axios.post(`http://localhost:5000/farm/soil_health_and_crop_management`, farm_body)
+      const fertilizer_response = await axios.post(`https://cropify-ai.onrender.com/farm/soil_health_and_crop_management`, farm_body)
       
       if (fertilizer_response.status === 200) {
         const data = await fertilizer_response.data 

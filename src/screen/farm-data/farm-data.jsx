@@ -21,6 +21,7 @@ const Farm_data = () =>
     setLoad,
     nav,
     setError,
+    weather
   
   } = useContext(farm_data_context)
   
@@ -73,7 +74,8 @@ const Farm_data = () =>
         )}
        
 
-        <section className='data_field'>
+       {weather && (
+         <section className='data_field'>
           <h1>Farm Data</h1>
             <form>
               <div className='crop'>
@@ -131,10 +133,10 @@ const Farm_data = () =>
           </form>
 
           <div>
-            <button onClick={() => { fertilizer_data_response(); weed_data_response(); pests_and_diseases_response(); soil_and_crop_management_response(); navigation() }}>{load ? <CircularProgress color="success" /> : "Submit"}
-</button>
+            <button onClick={() => { fertilizer_data_response(); weed_data_response(); pests_and_diseases_response(); soil_and_crop_management_response(); navigation() }}>{load ? <CircularProgress color="success" /> : "Submit"}</button>
           </div>
         </section>
+       )}
         
       </section>
     </DashboardLayout>

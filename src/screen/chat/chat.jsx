@@ -10,7 +10,7 @@ import { useContext } from 'react'
 import { chatContext } from '../../service/chat_context'
 import { FaArrowDownLong } from "react-icons/fa6";
 const Chat = () => {
-  const { get_screen_message, get_chat_ID , chat, get_input_message, button_sent, chatload, chatError, setChatError, setChatLoad} = useContext(chatContext)
+  const { get_screen_message, get_chat_ID , chat, get_input_message, button_sent, chatload, chatError, setChatError, setChatLoad, message} = useContext(chatContext)
   
   useEffect(()=>{
     get_chat_ID()
@@ -96,7 +96,7 @@ const Chat = () => {
         {
           chatload && (
                       <div style={{display:"flex", justifyContent:"center", alignItems:"center", width:"100%"}}>
-           <Box  sx={{ display: 'flex'}}>
+           <Box sx={{ display: 'flex'}}>
               <CircularProgress />
             </Box> 
         </div>
@@ -135,7 +135,7 @@ const Chat = () => {
                 className='input_field'
                 onChange={get_input_message}
               />
-              <Button variant='contained' sx={{ width: "10%", height: "40px", padding: "10px", color: "white", backgroundColor: "#325757", borderRadius:"12px" }} onClick={()=>button_sent()}>
+              <Button disabled={!message} variant='contained' sx={{ width: "10%", height: "40px", padding: "10px", color: "white", backgroundColor: "#325757", borderRadius:"12px" }} onClick={()=>button_sent()}>
                 <IoIosSend  className='send'/>
               </Button>
             </section>

@@ -8,7 +8,7 @@ export const chatContext = createContext(null)
 
 
 const ChatProvider = ({children}) => {
-    const [ message, setMessage ] = useState()
+    const [ message, setMessage ] = useState(null)
 
     const [ chat, setChat ] = useState([])
     
@@ -61,6 +61,7 @@ const ChatProvider = ({children}) => {
         const data = await chat_response.data.content
         setChat([ ...chat, { user: message, ai: data, links:chat_response?.data?.response_metadata?.links ? chat_response?.data?.response_metadata?.links : [] } ])
         setChatLoad(false)
+        setMessage(null)
       }
     } catch (error) {
       setChatError(error.message)
@@ -77,7 +78,8 @@ const ChatProvider = ({children}) => {
           button_sent,
           chatError,
           setChatError,
-          setChatLoad
+      setChatLoad,
+          message
       }}>
       {children}
     </chatContext.Provider>

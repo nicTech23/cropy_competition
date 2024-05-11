@@ -31,6 +31,7 @@ const ImageProvider = ({children}) => {
                     const data = await response.data
                     set_img_data(data)
                     set_pic_loading(false)
+                    setPicture(null)
                 }
             } else {
                 alert("Upload image")
@@ -41,7 +42,7 @@ const ImageProvider = ({children}) => {
     }
 
   return (
-    <imageContext.Provider value={{image, get_image, image_response, img_data, pic_loading, img_error, set_img_error,set_pic_loading }}>
+    <imageContext.Provider value={{image, get_image, image_response, img_data, pic_loading, img_error, set_img_error,set_pic_loading ,picture }}>
       {children}
     </imageContext.Provider>
   )

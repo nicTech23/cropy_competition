@@ -2,14 +2,14 @@ import React from 'react'
 import DashboardLayout from '../../components/dashboardLayout/dashboardLayout'
 import logo from "../../assets/logo.png"
 import "./add-pic.css"
-import { Alert, Box, CircularProgress } from '@mui/material'
+import { Alert, Box, Button, CircularProgress } from '@mui/material'
 import { useContext } from 'react'
 import { imageContext } from '../../service/image_context'
 import ReactMarkdown from 'react-markdown';
 
 const AddPicture = () => {
 
-const {image, get_image, image_response, img_data, pic_loading, img_error, set_img_error, set_pic_loading } = useContext(imageContext)
+const {image, get_image, image_response, img_data, pic_loading, img_error, set_img_error, set_pic_loading, picture } = useContext(imageContext)
 
     // if (img_error) {
     //     const inter = setInterval(() => { 
@@ -41,7 +41,7 @@ const open =()=>{
                         <p onClickCapture={()=>open()}>Browse image</p> 
                     </div>
                     <input type='file' id='file' style={{display:"none"}} onChange={get_image}/>
-                    <button className='upload_btn' onClick={()=> image_response ()} >Upload</button>
+                      <Button sx={{marginLeft:"10%"}}  variant='contained' disabled={!picture } className='upload_btn' onClick={()=> image_response ()} >Upload</Button>
                 </div>
                {
                 image && (

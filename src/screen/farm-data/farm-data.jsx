@@ -74,7 +74,7 @@ const Farm_data = () =>
         )}
        
 
-       {weather && (
+       {Object.keys(weather).length > 0 ? (
          <section className='data_field'>
           <h1>Farm Data</h1>
             <form>
@@ -136,7 +136,7 @@ const Farm_data = () =>
             <button onClick={() => { fertilizer_data_response(); weed_data_response(); pests_and_diseases_response(); soil_and_crop_management_response(); navigation() }}>{load ? <CircularProgress color="success" /> : "Submit"}</button>
           </div>
         </section>
-       )}
+       ): <h1>Loading...</h1>}
         
       </section>
     </DashboardLayout>

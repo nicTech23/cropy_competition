@@ -109,7 +109,7 @@ const Control = () => {
                 ))}
                 </ul>
 
-                <h2>Chemical Treatments:</h2>
+                // <h2>Chemical Treatments:</h2>
                 {/* {pests_and_diseases_control.chemical_treatments.length === 0 ? (
                 <p>No chemical treatments recommended.</p>
                 ) : (

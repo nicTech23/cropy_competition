@@ -100,7 +100,7 @@ const Control = () => {
                 <ul>
                 {pests_and_diseases_control.organic_treatments.map((treatment, index) => (
                     <li key={index}>
-                    <h4>{treatment.treatment_name}</h4>
+                    <h4>{treatment.treatment}</h4>
                     <ul>
                         <li>Application Rate: {treatment.application_rate}</li>
                         <li>Safety Precautions: {treatment.safety_precautions}</li>
@@ -109,7 +109,7 @@ const Control = () => {
                 ))}
                 </ul>
 
-                // <h2>Chemical Treatments:</h2>
+                 <h2>Chemical Treatments:</h2>
                 {/* {pests_and_diseases_control.chemical_treatments.length === 0 ? (
                 <p>No chemical treatments recommended.</p>
                 ) : (
@@ -119,6 +119,7 @@ const Control = () => {
                     ))}
                 </ul>
                 )} */}
+                
              </div>
           ) : <div>Loading...</div> }
           
@@ -136,6 +137,64 @@ const Control = () => {
         <AccordionDetails sx={{marginLeft:"2rem"}}>
           
           {weed_control ? (
+             <div>
+                <h1>Weed Management</h1>
+
+                <h2>Early Growth:</h2>
+                <h3>Key Weeds:</h3>
+                <ul>
+                
+                <h3>Pre emergent</h3>
+                {weed_control?.pre_emergent.map((emergent, index)=>{
+                  return (<p key={index}>{emergent }</p>)
+                })}
+                  
+                <h3>Post emergent</h3>
+                {weed_control?.post_emergent.map((emergent, index)=>{
+                  return (<p key={index}>{emergent }</p>)
+                })}
+                  
+                <h3>Cultural</h3>
+                {weed_control?.cultural.map((emergent, index)=>{
+                  return (<p key={index}>{emergent }</p>)
+                })}
+                  
+                <h3>Mechanical</h3>
+                {weed_control?.mechanical.map((emergent, index)=>{
+                  return (<p key={index}>{emergent }</p>)
+                })}
+                  
+                <h3>Chemical</h3>
+                {weed_control?.chemical.map((emergent, index)=>{
+                  return (<p key={index}>{emergent }</p>)
+                })}
+                  
+                <h3>Chemical</h3>
+                {weed_control?.chemical.map((emergent, index)=>{
+                  return (<p key={index}>{emergent }</p>)
+                })}
+                <h3>Special</h3>
+                {weed_control?.special.map((emergent, index)=>{
+                  return (<p key={index}>{emergent }</p>)
+                })}
+                
+                </ul>
+                <p>Pre-Emergent Herbicides: {weed_control.early_growth.pre_emergent_herbicides}</p>
+                <p>Cultural Controls: {weed_control.early_growth.cultural_controls}</p>
+                <p>Application Details: {weed_control.early_growth.application_details}</p>
+
+                <h2>Mid-Season:</h2>
+                <p>In-Crop Strategies: {weed_control.mid_season.in_crop_strategies}</p>
+                <p>Selective Herbicides: {weed_control.mid_season.selective_herbicides}</p>
+                <p>Weather Considerations: {weed_control.mid_season.weather_considerations}</p>
+
+                <h2>Late Season:</h2>
+                <p>Late-Emerging Weeds: {weed_control.late_season.late_emerging_weeds}</p>
+                <p>Desiccants/Harvest Aids: {weed_control.late_season.desiccants_harvest_aids}</p>
+                <p>Re-Cropping Concerns: {weed_control.late_season.re_cropping_concerns}</p>
+            </div>
+          ): <div>Loading...</div>}
+          {/* {weed_control ? (
              <div>
                 <h1>Weed Management</h1>
 
@@ -160,7 +219,7 @@ const Control = () => {
                 <p>Desiccants/Harvest Aids: {weed_control.late_season.desiccants_harvest_aids}</p>
                 <p>Re-Cropping Concerns: {weed_control.late_season.re_cropping_concerns}</p>
             </div>
-          ): <div>Loading...</div>}
+          ): <div>Loading...</div>} */}
           
         </AccordionDetails>
       </Accordion>

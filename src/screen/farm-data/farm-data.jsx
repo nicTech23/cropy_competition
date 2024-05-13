@@ -74,15 +74,28 @@ const Farm_data = () =>
         )}
        
 
-       {Object.keys(weather).length > 0 ? (
+       {!Object.keys(weather).length > 0 ? (
          <section className='data_field'>
           <h1>Farm Data</h1>
             <form>
               <div className='crop'>
                 <h3 for="crop">Crop</h3>
-                <div className='crop_field'>
-                  <input type='text' name='crop' id='crop' placeholder='Enter crop' onChange={get_farm_data}/>
-                </div>
+                <div>
+                   <div className='crop_field'>
+                      <input type='text' name='crop' id='crop' placeholder='Enter crop' onChange={get_farm_data}/>
+                    </div>
+                    <div className='crop_field'>
+                      <input type='text' name='growth_stage' id='growth_stage' placeholder='Enter growth stage' onChange={get_farm_data}/>
+                    </div>
+                  </div>
+              </div>
+
+              <div className='crop'>
+                <div>
+                    <div className='crop_field'>
+                      <input type='text' name='key_weeds' id='key_weeds' placeholder='Enter key weeds' onChange={get_farm_data}/>
+                    </div>
+                  </div>
               </div>
               
             <div className='soil'>
@@ -128,7 +141,9 @@ const Farm_data = () =>
                       <input type='text' name='diseases' placeholder='Enter Diseases' onChange={get_farm_data}/>
                   </div>
                </div>
-            </div>
+              </div>
+              
+
 
           </form>
 

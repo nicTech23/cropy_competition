@@ -23,7 +23,9 @@ const Farm_data_provider = ({children}) => {
     pct_soil_moisture: "",
     soil_fertility: "",
     diseases: "",
-    pests: ""
+    pests: "",
+    growth_stage: "",
+    key_weeds:""
   })
   
   const [ soil_crop_management, set_soil_crop_management] = useState(null)
@@ -205,17 +207,22 @@ const get_farm_data = useCallback((e) =>{
     try {
       const farm_body = {
         farm_data: {
-          crop: farm_data.crop,
+          crop: {
+            crop: farm_data.crop,
+            growth_stage: farm_data.growth_stage,
+          },
+          
           soil: {
             soil_type: farm_data.soil_type,
             soil_ph: farm_data.soil_ph,
             pct_soil_moisture: farm_data.pct_soil_moisture,
             soil_fertility: farm_data.soil_fertility
           },
-      pests_and_diseases: {
-        diseases: farm_data.diseases,
-        pests: farm_data.pests
-      }
+          pests_and_diseases: {
+            diseases: farm_data.diseases,
+            pests: farm_data.pests
+              },
+          key_weeds: farm_data.key_weeds,
         },
         weather_data: {
           status: weather?.status,

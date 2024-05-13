@@ -1,5 +1,5 @@
 .chat_ai{
-    width: 90%;
+    max-width: 90%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -78,7 +78,7 @@
 }
 
  .chat_box > .messages > .ai_message > .circle {
-    width: 30px;
+   width: 30px;
     height: 30px;
     border-radius: 100%;
     background-color: #f2f3f3;
@@ -90,7 +90,7 @@
 }
 
 .chat_box > .messages > .ai_message > .message {
-    width: 90%;
+   width: 90%;
     background-color: #80afaf;
     color: white;
     font-size: 12px;

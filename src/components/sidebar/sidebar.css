@@ -1,7 +1,7 @@
 .sidebar_div {
-    width: 100%;
+    max-width: 100%;
     background-color: #325757;
-    height: 100vh;
+    min-height: 100vh;
     color: white;
     padding-left: 10px;
     padding-left: 20px;
@@ -16,16 +16,16 @@
 }
 
 .nav {
-    width: 90%;
+    max-width: 90%;
     margin-top: 1rem;
 }
 
 .nav_container{
-    height: 40px;
+    min-height: 40px;
 }
 
 .nav > .nav_container > div {
-    width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -73,7 +73,7 @@
 .crops > div > a {
     font-weight: 500;
     font-size: 18px;
-    width: 100vh;
+    max-width: 100vh;
     text-decoration: none;
     color: white;
 }
@@ -81,7 +81,7 @@
 .user {
     margin-top: 2rem;
     width: 90%;
-    height: 40px;
+    min-height: 40px;
     background-color: #427373;
     border-radius: 12px;
     display: flex;
@@ -109,7 +109,7 @@
 }
 
 .weather_box{
-    width: 100%;
+    max-width: 100%;
     background-color: #427373;
     margin-top: 3rem;
 }

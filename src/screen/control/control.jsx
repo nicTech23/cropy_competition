@@ -110,15 +110,20 @@ const Control = () => {
                 </ul>
 
                  <h2>Chemical Treatments:</h2>
-                {/* {pests_and_diseases_control.chemical_treatments.length === 0 ? (
+                {pests_and_diseases_control.chemical_treatments.length === 0 ? (
                 <p>No chemical treatments recommended.</p>
                 ) : (
                 <ul>
                     {pests_and_diseases_control.chemical_treatments.map((treatment, index) => (
-                    <li key={index}>{treatment}</li>
+                      <li key={index}>
+                        <h3>{treatment.product}</h3>
+                        <div><h3>Application rate:</h3> {treatment.application_rate}</div>
+                        <div><h3>safety precautions:</h3> { treatment.safety_precautions}</div>
+                      </li>
+                      
                     ))}
                 </ul>
-                )} */}
+                )}
                 
              </div>
           ) : <div>Loading...</div> }
@@ -140,9 +145,6 @@ const Control = () => {
              <div>
                 <h1>Weed Management</h1>
 
-                <h2>Early Growth:</h2>
-                <h3>Key Weeds:</h3>
-                <ul>
                 
                 <h3>Pre emergent</h3>
                 {weed_control?.pre_emergent.map((emergent, index)=>{
@@ -174,24 +176,8 @@ const Control = () => {
                   return (<p key={index}>{emergent }</p>)
                 })}
                 <h3>Special</h3>
-                {weed_control?.special.map((emergent, index)=>{
-                  return (<p key={index}>{emergent }</p>)
-                })}
+                  <div>{ weed_control?.special}</div>
                 
-                </ul>
-                <p>Pre-Emergent Herbicides: {weed_control.early_growth.pre_emergent_herbicides}</p>
-                <p>Cultural Controls: {weed_control.early_growth.cultural_controls}</p>
-                <p>Application Details: {weed_control.early_growth.application_details}</p>
-
-                <h2>Mid-Season:</h2>
-                <p>In-Crop Strategies: {weed_control.mid_season.in_crop_strategies}</p>
-                <p>Selective Herbicides: {weed_control.mid_season.selective_herbicides}</p>
-                <p>Weather Considerations: {weed_control.mid_season.weather_considerations}</p>
-
-                <h2>Late Season:</h2>
-                <p>Late-Emerging Weeds: {weed_control.late_season.late_emerging_weeds}</p>
-                <p>Desiccants/Harvest Aids: {weed_control.late_season.desiccants_harvest_aids}</p>
-                <p>Re-Cropping Concerns: {weed_control.late_season.re_cropping_concerns}</p>
             </div>
           ): <div>Loading...</div>}
           {/* {weed_control ? (

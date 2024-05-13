@@ -1,5 +1,5 @@
 .farm_data{
-    width: 97%;
+    max-width: 97%;
     margin: auto;
     height: 100vh;
     overflow-y: scroll;

@@ -74,7 +74,7 @@ const Farm_data = () =>
         )}
        
 
-       {!Object.keys(weather).length > 0 ? (
+       {Object.keys(weather).length > 0 ? (
          <section className='data_field'>
           <h1>Farm Data</h1>
             <form>
